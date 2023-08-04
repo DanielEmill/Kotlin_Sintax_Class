@@ -1,9 +1,11 @@
 
 class SmartDevice {
+    //Propiedades
     val name = "Android TV"
     val category = "Entertainment"
     var deviceStatus = "online"
 
+//gets y sets
     var speakerVolume = 2
         get() = field
         set(value) {
@@ -12,8 +14,21 @@ class SmartDevice {
             }
         }
 
+    //Constructor
 
+    class SmartDevice(val name: String, val category: String) {
 
+        var deviceStatus = "online"
+
+        fun turnOn(){
+            println("El dispositivo se ha encendido.")
+        }
+
+        fun turnOff(){
+            println("El dispositivo se ha apagado.")
+        }
+    }
+//metodos
     fun turnOn(){
         println("El dispositivo se ha encendido.")
     }
