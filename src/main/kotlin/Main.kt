@@ -1,45 +1,18 @@
-
-class SmartDevice {
-    //Propiedades
-    val name = "Android TV"
-    val category = "Entertainment"
+class SmartDevice(val name: String, val category: String) {
     var deviceStatus = "online"
-
-//gets y sets
-    var speakerVolume = 2
-        get() = field
-        set(value) {
-            if (value in 0..100) {
-                field = value
-            }
+    constructor(name: String, category: String, statusCode: Int) : this(name, category)
+    {
+        deviceStatus = when (statusCode)
+        {
+            0 -> "offline"
+            1 -> "online"
+            else -> "unknown"
         }
-
-    //Constructor
-
-    class SmartDevice(val name: String, val category: String) {
-
-        var deviceStatus = "online"
-
-        fun turnOn(){
-            println("El dispositivo se ha encendido.")
-        }
-
-        fun turnOff(){
-            println("El dispositivo se ha apagado.")
-        }
-    }
-//metodos
-    fun turnOn(){
-        println("El dispositivo se ha encendido.")
-    }
-    fun turnOff(){
-        println("El dispositivo se ha apagado.")
     }
 
 }
 
 fun main(args: Array<String>) {
-    val smartTvDevice = SmartDevice()
+    val smartTvDevice = SmartDevice("Android TV", "Entertainment")
     println("Device name is: ${smartTvDevice.name}")
-    smartTvDevice.turnOn()
 }
