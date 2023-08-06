@@ -24,6 +24,10 @@ class Persona{
 }
 
 fun main(args: Array<String>) {
-    val smartTvDevice = SmartDevice("Android TV", "Entertainment")
-    println("Device name is: ${smartTvDevice.name}")
+    var Persona1:Persona = Persona()
+    Persona1.nombre="Juan"
+    Persona1.ID="412412"
+    Persona1.edad=16
+    Persona1.telefono="8095884353"
+    Persona1.ImprimirDatos()
 }
