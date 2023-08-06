@@ -10,11 +10,15 @@ class SmartDevice(val name: String, val category: String) {
         }
     }
 }
-class Persona{
+class Persona(ID:String, nombre:String, edad:Int, telefono:String){
     var ID:String = ""
     var nombre:String=""
     var edad:Int=0
     var telefono:String=""
+    constructor():this("","",0,"",){
+
+    }
+
     fun Caminar(){
         println("La persona empezo a caminar.")
     }
