@@ -9,7 +9,18 @@ class SmartDevice(val name: String, val category: String) {
             else -> "unknown"
         }
     }
-
+}
+class Persona{
+    var ID:String = ""
+    var nombre:String=""
+    var edad:Int=0
+    var telefono:String=""
+    fun Caminar(){
+        println("La persona empezo a caminar.")
+    }
+    fun ImprimirDatos(){
+        println("Nombre: $nombre \n ID: $ID \n Edad: $edad \n Telefono: $telefono")
+    }
 }
 
 fun main(args: Array<String>) {
